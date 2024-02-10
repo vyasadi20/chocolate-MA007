@@ -17,11 +17,7 @@ const addToCart = (e) => {
   dataLayer.push({
     event: "addToCart",
     ecommerce: {
-      items: [
-        {
-          item_name: chocolateName,
-        },
-      ],
+      transaction_name: chocolateName,
     },
   });
 
