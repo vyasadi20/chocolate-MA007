@@ -1,17 +1,13 @@
-
-
-
-
 // Get all elements with the class "add-to-cart-btn"
 const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
 
 // Function that is executed when an "Add to Cart" button is clicked
 const addToCart = (e) => {
   // Find the parent element of the clicked button (a div with class "chocolate-card")
-  const chocolateCard = e.target.closest(".chocolate-card");
+  const chocolateCard = e.target.parentElement;
   
   // Extract the name of the chocolate from the h3 element within the chocolate card
-  const chocolateName = chocolateCard.querySelector("h3").innerText;
+  const chocolateName = chocolateCard.querySelector("h3").textContent;
 
   // Push the chocolate name into the dataLayer
   dataLayer.push({
@@ -23,7 +19,7 @@ const addToCart = (e) => {
 
   // Optionally, you can perform additional actions here, such as updating the UI
   
-  console.log("Added to cart:", chocolateName);
+  alert(`Added ${chocolateName} to the cart`);
 };
 
 // Loop through each "Add to Cart" button and attach the event listener
