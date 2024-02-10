@@ -20,10 +20,12 @@ const addToCart = (e) => {
   // Optionally, you can perform additional actions here, such as updating the UI
   
   alert(`Added ${chocolateName} to the cart`);
+
+  console.log("Added to cart:", chocolateName);
 };
 
 
-console.log("Added to cart:", chocolateName);
+
 
 // Loop through each "Add to Cart" button and attach the event listener
 addToCartButtons.forEach(button => {
