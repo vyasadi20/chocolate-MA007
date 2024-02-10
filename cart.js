@@ -22,6 +22,9 @@ const addToCart = (e) => {
   alert(`Added ${chocolateName} to the cart`);
 };
 
+
+console.log("Added to cart:", chocolateName);
+
 // Loop through each "Add to Cart" button and attach the event listener
 addToCartButtons.forEach(button => {
   button.addEventListener("click", addToCart);
