@@ -4,9 +4,9 @@ const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
 // Function that is executed when an "Add to Cart" button is clicked
 const addToCart = (e) => {
   // Find the parent element of the clicked button (a div with class "chocolate-card")
-  /*const chocolateCard = e.target.parentElement;*/
+  const chocolateCard = e.target.parentElement;
 
-  const chocolateCard = e.target.closest(".chocolate-card");
+ 
 
   if (chocolateCard) {
     // Extract the name of the chocolate from the h3 element within the chocolate card
