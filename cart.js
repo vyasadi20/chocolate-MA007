@@ -9,6 +9,8 @@ const addToCart = (e) => {
   // Extract the name of the chocolate from the h3 element within the chocolate card
   const chocolateName = chocolateCard.querySelector("h3").textContent;
 
+   dataLayer.push({ ecommerce: null });
+
   // Push the chocolate name into the dataLayer
   dataLayer.push({
     event: "addToCart",
